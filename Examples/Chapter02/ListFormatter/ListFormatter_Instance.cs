@@ -31,7 +31,8 @@ namespace Examples.Purity.ListFormatter.Instance
    
    public class ListFormatter_InstanceTests
    {
-      [Test] public void ItWorksOnSingletonList()
+      [Test] 
+      public void ItWorksOnSingletonList()
       {
          var input = new List<string> { "coffee beans" };
          var output = new ListFormatter().Format(input);
@@ -50,10 +51,10 @@ namespace Examples.Purity.ListFormatter.Instance
       [Test]
       public void ItWorksOnAVeryLongList()
       {
-         var size = 100000;
+         var size = 10000000;
          var input = Enumerable.Range(1, size).Select(i => $"item{i}").ToList();
          var output = new ListFormatter().Format(input);
-         Assert.AreEqual("100000. Item100000", output[size - 1]);
+         Assert.AreEqual("10000000. Item10000000", output[size - 1]);
       }
    }
 }

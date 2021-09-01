@@ -29,10 +29,11 @@ namespace Examples.Purity.ListFormatter.Parallel.WithRange
       [Test]
       public void ItWorksOnAVeryLongList()
       {
-         var size = 100000;
+         // var size = 100000;
+         var size = 10000000;
          var input = Enumerable.Range(1, size).Select(i => $"item{i}").ToList();
          var output = ListFormatter.Format(input);
-         Assert.That(output[size - 1].StartsWith("100000. Item"));
+         Assert.That(output[size - 1].StartsWith("10000000. Item"));
       }
    }
 }
