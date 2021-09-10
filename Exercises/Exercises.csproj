@@ -8,11 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Moq" Version="4.16.1" />
+    <PackageReference Include="Shouldly" Version="4.0.3" />
     <PackageReference Include="System.Collections.Specialized" Version="4.3.0" />
 
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
     <PackageReference Include="NUnit" Version="3.13.2" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.0.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
 
     <ProjectReference Include="..\Examples\Examples.csproj" />
     <ProjectReference Include="..\LaYumba.Functional.Data\LaYumba.Functional.Data.csproj" />
